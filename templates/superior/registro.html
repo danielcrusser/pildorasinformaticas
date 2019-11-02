@@ -1,0 +1,69 @@
+{% extends "superior/base.html" %}
+
+{% block title %} Registro {% endblock %}
+
+{% block content %}
+<style>
+
+    form {
+        width: 30%;
+        border: 1px solid #CCC;
+        margin: 20px;
+        padding: 20px; 
+        background: linear-gradient(0deg, #1668C4, white);
+        
+    }
+    label{
+        font-size: 13px;
+        display: block;
+        width: 100%;
+    }
+    input{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    input:focus{
+        border: 1px solid #1668C4;
+    }
+    input[type="submit"]{
+        margin-bottom: 0;
+        background-color: darkorange;
+        color: black;
+        border:1.2px solid #1668C4 ;
+    }
+    input[type="submit"]:active{
+        background-color:orange;
+    }
+
+
+
+
+
+</style>
+
+<center>
+
+        <form action="" id="formulario">
+                
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" placeholder="Escribe tu apellido">
+
+                    <label for="e-mail">E-mail</label>
+                    <input type="email" id="email" placeholder="Ingresa tu Correo Electronico">
+
+                    <label for="celular">celular</label>
+                    <input type="tel" placeholder="Telefono Celular">
+
+                    <input type="submit" value="Registrarme">
+ 
+        </form>
+</center>
+
+{% endblock %}
+
+
+
+

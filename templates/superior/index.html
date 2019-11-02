@@ -1,0 +1,61 @@
+{% include "superior/base.html" %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tacos Online</title>
+</head>
+<body>
+    
+ 
+
+    <h1>Taqueria On-line</h1>
+    
+    <menu id=tortas>
+        <ul>
+                {% for t in tortas %}
+                <li>{{ t }}</li>
+                {% endfor %}
+        </ul>
+    </menu id=tacos>
+
+    <menu>
+        <ul>
+                {% for ts in tacos %}
+                <li>{{ ts }}</li>
+                {% endfor %}
+        </ul>
+    </menu>
+
+    <menu id=gringas>
+            <ul>
+                    {% for g in gringas %}
+                    <li>{{ g }}</li>
+                    {% endfor %}
+            </ul>
+        </menu>
+
+        <menu id=bebidas>
+                <ul>
+                        {% for b in bebidas %}
+                        <li>{{ b }}</li>
+                        {% endfor %}
+                </ul>
+            </menu>
+
+       <!-- <footer id=piePag>
+                <h5>Contacto:</h5>
+                <h5>Cel. 5543499093</h5>
+                <h5>mail: elbuentaco@gmail.com</h5>
+        
+                <h6>Col. San Mateo Tlaltenango</h6>
+                <h6 style="background:darkorange; text-align: right;">Gracias por tu peferencia</h6>
+        </footer>
+
+
+-->
+
+</body>
+</html>
