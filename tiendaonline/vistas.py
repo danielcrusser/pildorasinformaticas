@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.http import HttpResponse
 
 def registro(request):
-    return render(request, "superior/registro.html")
+
+    return render(request, "persona/registro.html")
 
 

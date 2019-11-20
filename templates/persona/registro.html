@@ -44,21 +44,25 @@
 
 <center>
 
-        <form action="" id="formulario">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
                 
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+                    <p><label for="nombre">Nombre</label>
+                        <input type="text" name=nombre id="nombre" placeholder="Escribe tu nombre"></p>
 
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" placeholder="Escribe tu apellido">
+                    <p><label for="apellidos">Apellido</label>
+                        <input type="text" id="apellidos" placeholder="Escribe tu apellido"></p>
+                    
+                    <label for="direccion">E-mail</label>
+                    <input type="text" id="direccion" placeholder="Ingresa tu Correo Electronico">
 
-                    <label for="e-mail">E-mail</label>
+                    <label for="email">E-mail</label>
                     <input type="email" id="email" placeholder="Ingresa tu Correo Electronico">
 
-                    <label for="celular">celular</label>
-                    <input type="tel" placeholder="Telefono Celular">
+                  
 
-                    <input type="submit" value="Registrarme">
+                    <p><button type="submit">save</button></p>
  
         </form>
 </center>

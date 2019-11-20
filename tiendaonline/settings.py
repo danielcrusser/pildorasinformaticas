@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'regUsuarios',
+    'pruebaformularios',
 ]
 
 MIDDLEWARE = [
@@ -49,13 +49,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+#C:/Users/Daniel Cruz/Desktop/tiendaonline/templates
 ROOT_URLCONF = 'tiendaonline.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Daniel Cruz/Desktop/tiendaonline/templates'],
+        'DIRS': ['C:/Users/Daniel Cruz/Desktop/tiendaonline/pruebaformularios/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,5 +121,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'tiendaonline/static'),
+    os.path.join(BASE_DIR, 'static'),
     )

@@ -9,69 +9,46 @@
     <title>
         {% block title %} Inicio BASE {% endblock %}
     </title>
+    {% block extrahead %}
+    <style>
+            body{
+                background-image: url("{% static 'img/fondo1.jpg' %}");
+                background-repeat: repeat;
+                background-attachment: scroll;
+                margin-top:-20px;
+                margin-bottom: -200px;
+            }
+            #piePag{
+                margin: 0;
+                text-align: justify;
+                width: 15%;
+                height: 15%;
+            }
+    </style>
+
+    {% endblock %}
+   
+
+
 </head>
 <style>
-    body{
-        margin-top:-20px;
-        margin-bottom: -200px;
-    }
-    #piePag{
-        margin: 0;
-        text-align: justify;
-        width: 15%;
-        height: 15%;
-    }
+        
+
 </style>
+
 <body>
 
-    <h1 style="color:black; text-align: center; background: linear-gradient(to bottom, darkorange, white);" >El Buen Taco</h1>
+    <h1 style="border-radius:40px; color:black; text-align:center; background:linear-gradient(to bottom, rgb(62, 228, 243), white);" >El Buen Taco</h1>
     {% include "superior/barra.html" %}
   
     
      {% block content %}
-     <body>
-    
- 
-
-        <h1>Taqueria On-line</h1>
-        
-        <menu id=tortas>
-            <ul>
-                    {% for t in tortas %}
-                    <li>{{ t }}</li>
-                    {% endfor %}
-            </ul>
-        </menu id=tacos>
-    
-        <menu>
-            <ul>
-                    {% for ts in tacos %}
-                    <li>{{ ts }}</li>
-                    {% endfor %}
-            </ul>
-        </menu>
-    
-        <menu id=gringas>
-                <ul>
-                        {% for g in gringas %}
-                        <li>{{ g }}</li>
-                        {% endfor %}
-                </ul>
-            </menu>
-    
-            <menu id=bebidas>
-                    <ul>
-                            {% for b in bebidas %}
-                            <li>{{ b }}</li>
-                            {% endfor %}
-                    </ul>
-                </menu>
     
 
 
      {% endblock %}
 
-    
+    {% block footer %}
     <footer id=piePag>
         <p>Contacto:</p>
         <p>Cel. 5543499093</p>
@@ -79,9 +56,9 @@
         <p>Col. San Mateo Tlaltenango</p>
         
         
-    </footer>
-    <h4 style="color:orange; background:rgb(21, 95, 180); text-align: center;">Estamos a tus órdenes y RECUERDA Envíos a partír de $100 en tu pedido</h6>
-
+     </footer>
+     <h4 style="color:orange; background:rgb(21, 95, 180); text-align: center;">Estamos a tus órdenes y RECUERDA Envíos a partír de $100 en tu pedido</h6>
+    {% endblock %}
 
 </body>
 </html>

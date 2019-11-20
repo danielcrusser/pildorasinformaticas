@@ -16,8 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from tiendaonline.vistas import registro
+from pruebaformularios import views, forms
+
 
 urlpatterns = [
+    path('', include('pruebaformularios.urls')),
+    path('admin/', admin.site.urls),
+]
+"""
+urlpatterns = [
+    path('', include('pruebaformularios.urls')),
     path('admin/', admin.site.urls),
     path('registro/', registro),
+    path('nuevo/', include('pruebaformularios.urls')),
+    path('', include('pruebaformularios.urls')),
+   
 ]
+"""
